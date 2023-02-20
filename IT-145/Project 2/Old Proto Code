@@ -1,0 +1,149 @@
+            switch (species) {
+            	case "monkey":
+            		//scan monkeyList
+            		//try and match the name
+            		//if we find the match save the LOGIC value in animalFound
+                	for(Monkey m : monkeyList) {
+                		
+                		if (m.getName().equalsIgnoreCase(name)) {
+
+                    		animalFound++;
+                    		
+                    		//print the reserved status
+                    		//System.out.println("The current reserved status of " + m.getName() + " is: " + m.getReserved());
+
+                    		//now ask if they want to update
+                    		System.out.println("\nDo you want to change the reserved status: yes or no?");
+                    		updateStatus = scnr.nextLine().toLowerCase();
+                    			
+                    		//validate the input
+                    		while ((!updateStatus.equals("yes")) && (!updateStatus.equals("no"))) { 
+                    			System.out.println("Please enter yes or no");
+                    			updateStatus = scnr.nextLine().toLowerCase();
+                    		}
+                    			
+                    		if(updateStatus.equals("yes")) {//if the want to update just flip the status
+                    			
+                    			//get the current status
+                    			//if currently true make false
+                    			//if currently false make true
+                    			newStatusBool = m.getReserved() ? false : true;
+                    			
+                    			//then set
+                    			m.setReserved(newStatusBool);
+                    			
+                    			System.out.println(m.getName() + " now has a reserved status of: " + newStatusBool);
+                    			System.out.println("\nPress enter to return to the Main Menu");
+                    			scnr.nextLine();
+
+                    		}
+                    		else {//do nothing they don't want to update
+                    			return;
+                    		}
+                    	}
+                	}
+                	if (animalFound == 0) {//we never found a dog by that name throw a warning
+                		System.out.println("A monkey by that name was not found in the system. Press enter to return to Main Menu.");
+                		scnr.nextLine();
+                		return;                		
+                	}
+            	case "dog":
+            		//scan dogList
+            		//try and match the name
+            		//if we find the match save the LOGIC value in animalFound
+                	for(Dog d : dogList) {
+                		
+                		if (d.getName().equalsIgnoreCase(name)) {
+
+                    		animalFound++;
+                    		
+                    		//print the reserved status
+                    		System.out.println("The current reserved status of " + d.getName() + " is: " + d.getReserved());
+
+                    		//now ask if they want to update
+                    		System.out.println("\nDo you want to change the reserved status: yes or no?");
+                    		updateStatus = scnr.nextLine().toLowerCase();
+                    			
+                    		//validate the input
+                    		while ((!updateStatus.equals("yes")) && (!updateStatus.equals("no"))) { 
+                    			System.out.println("Please enter yes or no");
+                    			updateStatus = scnr.nextLine().toLowerCase();
+                    		}
+                    			
+                    		if(updateStatus.equals("yes")) {//if the want to update just flip the status
+                    			
+                    			//get the current status
+                    			//if currently true make false
+                    			//if currently false make true
+                    			newStatusBool = d.getReserved() ? false : true;
+                    			
+                    			//then set
+                    			d.setReserved(newStatusBool);
+                    			
+                    			System.out.println(d.getName() + " now has a reserved status of: " + newStatusBool);
+                    			System.out.println("\nPress enter to return to the Main Menu");
+                    			scnr.nextLine();
+
+                    		}
+                    		else {//do nothing they don't want to update
+                    			return;
+                    		}
+                    	}
+                	}
+                	if (animalFound == 0) {//we never found a dog by that name throw a warning
+                		System.out.println("A dog by that name was not found in the system. Press enter to return to Main Menu.");
+                		scnr.nextLine();
+                		return;
+                		
+                	}
+            }
+            
+            //scan dogList
+            		//try and match the name
+            		//if we find the match save the LOGIC value in animalFound
+                	for(Dog d : dogList) {
+                		
+                		if (d.getName().equalsIgnoreCase(name)) {
+
+                    		animalFound++;
+                    		
+                    		//print the reserved status
+                    		System.out.println("The current reserved status of " + d.getName() + " is: " + d.getReserved());
+
+                    		//now ask if they want to update
+                    		System.out.println("\nDo you want to change the reserved status: yes or no?");
+                    		updateStatus = scnr.nextLine().toLowerCase();
+                    			
+                    		//validate the input
+                    		while ((!updateStatus.equals("yes")) && (!updateStatus.equals("no"))) { 
+                    			System.out.println("Please enter yes or no");
+                    			updateStatus = scnr.nextLine().toLowerCase();
+                    		}
+                    			
+                    		if(updateStatus.equals("yes")) {//if the want to update just flip the status
+                    			
+                    			//get the current status
+                    			//if currently true make false
+                    			//if currently false make true
+                    			newStatusBool = d.getReserved() ? false : true;
+                    			
+                    			//then set
+                    			d.setReserved(newStatusBool);
+                    			
+                    			System.out.println(d.getName() + " now has a reserved status of: " + newStatusBool);
+                    			System.out.println("\nPress enter to return to the Main Menu");
+                    			scnr.nextLine();
+
+                    		}
+                    		else {//do nothing they don't want to update
+                    			return;
+                    		}
+                    	}
+                	}
+                	if (animalFound == 0) {//we never found a dog by that name throw a warning
+                		System.out.println("A dog by that name was not found in the system. Press enter to return to Main Menu.");
+                		scnr.nextLine();
+                		return;
+                		
+                	}
+            }

@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class ParseStrings {
+   public static void main(String[] args) {
+      Scanner scnr = new Scanner(System.in);
+      String userInput = "";
+      int firstIndex = -1; //init to -1
+      
+      while (!userInput.equals("q")){
+         
+         while (firstIndex == -1){
+         
+            //get the user inout and store in userInput 
+            System.out.println("Enter input string: ");
+            userInput = scnr.nextLine(); 
+         
+            //loop through the string to see if a the special char exists
+            firstIndex = userInput.indexOf(",");
+         
+            //throw error
+            if (firstIndex == -1){
+               System.out.println("Error: No comma in string");  
+            }
+
+         }
+      
+         System.out.println("First word: " + userInput.substring(0,firstIndex).replaceAll("\\s", ""));
+         System.out.println("Second word: " + userInput.substring(firstIndex + 1).replaceAll("\\s", ""));
+      }       
+   }
+}
